@@ -1,0 +1,5 @@
+{
+  "type": "COMPROMISED_USER",
+  "username": "testuser",
+  "severity": "critical"
+}
