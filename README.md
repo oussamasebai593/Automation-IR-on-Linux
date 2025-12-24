@@ -30,3 +30,11 @@ This project focuses on **detecting, analyzing, and responding to incidents** us
             |
             v
       Linux System Actions
+
+## UPDATE AND DOWNLOAD PYTHON3
+sudo apt update
+sudo apt install python3 python3-pip -y
+
+## create folder
+mkdir ir-automation && cd ir-automation
+
