@@ -1,0 +1,5 @@
+## execution : 
+sudo python3 ir_agent.py incident1.json
+
+## verification:
+sudo iptables -L -n
