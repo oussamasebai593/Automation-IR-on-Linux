@@ -1,0 +1,6 @@
+{
+  "type": "SSH_BRUTE_FORCE",
+  "source_ip": "10.0.0.5",
+  "attempts": 45,
+  "severity": "high"
+}
