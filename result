@@ -1,0 +1,48 @@
+sudo python3 ir_agent.py incident1.json
+
+[+] Executing response for SSH_BRUTE_FORCE
+[+] IP 10.0.0.5 blocked
+                                                                                                                                                                                                                    
+┌──(kali㉿kali)-[~/ir-automation]
+└─$ sudo iptables -L -n
+
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+DROP       all  --  10.0.0.5             0.0.0.0/0           
+DROP       all  --  10.0.0.5             0.0.0.0/0           
+
+Chain FORWARD (policy DROP)
+target     prot opt source               destination         
+DOCKER-USER  all  --  0.0.0.0/0            0.0.0.0/0           
+DOCKER-FORWARD  all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain DOCKER (1 references)
+target     prot opt source               destination         
+DROP       all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain DOCKER-BRIDGE (1 references)
+target     prot opt source               destination         
+DOCKER     all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain DOCKER-CT (1 references)
+target     prot opt source               destination         
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+
+Chain DOCKER-FORWARD (1 references)
+target     prot opt source               destination         
+DOCKER-CT  all  --  0.0.0.0/0            0.0.0.0/0           
+DOCKER-INTERNAL  all  --  0.0.0.0/0            0.0.0.0/0           
+DOCKER-BRIDGE  all  --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain DOCKER-INTERNAL (1 references)
+target     prot opt source               destination         
+
+Chain DOCKER-USER (1 references)
+target     prot opt source               destination         
+                                                                                                                                                                                                                    
+┌──(kali㉿kali)-[~/ir-automation]
+└─$ 
